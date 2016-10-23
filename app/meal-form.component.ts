@@ -4,6 +4,7 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'meal-form',
   template: `
+  <h3>Add a new meal to the trackr:</h3>
   <form id="newMeal">
     <div class="form-group">
       <label for="mealName">Enter your meal:</label>
@@ -20,7 +21,7 @@ import { Meal } from './meal.model';
     <button (click)="addClicked(newName.value, newDescription.value, newCalories.value);
       newName.value='';
       newDescription.value='';
-      newId.value='';
+      newCalories.value='';
     ">Add</button>
   </form>
   `
@@ -29,7 +30,7 @@ import { Meal } from './meal.model';
 export class MealFormComponent {
   @Output() newMealSender = new EventEmitter();
   addClicked(name: string, description: string, calories: number) {
-    var newMeal: Meal = new Meal(name, description, id);
+    var newMeal: Meal = new Meal(name, description, calories);
     this.newMealSender.emit(newMeal);
   }
 }

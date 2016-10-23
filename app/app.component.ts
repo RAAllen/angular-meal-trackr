@@ -32,9 +32,4 @@ export class AppComponent {
     new Meal("Baked Potatoes", "Two baked potatoes served with cheddar cheese, broccoli, facon and sour cream.", 595),
     new Meal("Pasta with Tomato Sauce", "Rigatoni with homemade tomato sauce with kalamata olives, capers and Parmesan cheese.", 405)
   ];
-  selectedMeal: Meal = null;
-  editMeal(clickedMeal: Meal) {
-    this.selectedMeal = clickedMeal;
-  }
-
 }
