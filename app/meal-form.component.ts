@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Meal } from './meal.model';
 
 @Component({
@@ -7,21 +7,29 @@ import { Meal } from './meal.model';
   <form id="newMeal">
     <div class="form-group">
       <label for="mealName">Enter your meal:</label>
-      <input id="mealName" type="text" class="form-control" placeholder="Fried Artichokes">
+      <input #newName id="mealName" type="text" class="form-control" placeholder="Fried Artichokes">
     </div>
     <div class="form-group">
       <label for="mealDescription">Add a description of the meal:</label>
-      <input id="mealDescription" type="text" class="form-control" placeholder="7 Deep fried artichokes served with a side of parsley and lemon sauce and 3 lemon wedges.">
+      <input #newDescription id="mealDescription" type="text" class="form-control" placeholder="7 Deep fried baby artichokes served with a side of parsley and lemon sauce and 3 lemon wedges.">
     </div>
     <div class="form-group">
       <label for="mealCalories">Add a calorie count to your meal:</label>
-      <input id="mealCalories" type="number" class="form-control" placeholder="575">
+      <input #newCalories id="mealCalories" type="number" class="form-control" placeholder="575">
     </div>
+    <button (click)="addClicked(newName.value, newDescription.value, newCalories.value);
+      newName.value='';
+      newDescription.value='';
+      newId.value='';
+    ">Add</button>
   </form>
   `
 })
 
 export class MealFormComponent {
-
-
+  @Output() newMealSender = new EventEmitter();
+  addClicked(name: string, description: string, calories: number) {
+    var newMeal: Meal = new Meal(name, description, id);
+    this.newMealSender.emit(newMeal);
+  }
 }

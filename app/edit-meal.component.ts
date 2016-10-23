@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Meal } from './meal.model';
 
 @Component({
@@ -11,4 +11,5 @@ import { Meal } from './meal.model';
 
 export class EditMealComponent {
   
+
 }
