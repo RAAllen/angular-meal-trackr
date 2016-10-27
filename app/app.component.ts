@@ -6,18 +6,16 @@ import { Meal } from './meal.model';
   template: `
   <div class="container">
     <h1>Meal Trackr</h1>
-    <div class="row">
-      <div id="mealForm" class="col-xs-6">
-        <meal-form
-          (newMealSender)="addClicked($event)"
-        ></meal-form>
-      </div>
-      <div id="mealTable" class="col-xs-6">
-        <meal-table
-          [childMealTable]="masterMealList"
-          (clickSender)="editMeal($event)"
-        ></meal-table>
-      </div>
+    <div id="mealTable">
+      <meal-table
+        [childMealTable]="masterMealList"
+        (clickSender)="editMeal($event)"
+      ></meal-table>
+    </div>
+    <div id="mealForm">
+      <meal-form
+        (newMealSender)="addClicked($event)"
+      ></meal-form>
     </div>
   </div>
   `
