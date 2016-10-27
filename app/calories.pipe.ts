@@ -23,7 +23,10 @@ export class CaloriesPipe implements PipeTransform {
       }
       return output;
     } else {
-      return output;
+      for (var i = 0; i < input.length; i++) {
+        output.push(input[i]);
+      }
     }
+    return output;
   }
 }

@@ -4,8 +4,7 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'meal-table',
   template: `
-
-
+<div class="table-responsive">
   <table id="viewMeals" class="table-bordered table-hover">
     <thead>
       <th>Meal
@@ -19,13 +18,13 @@ import { Meal } from './meal.model';
       <th>Description</th>
       <th>Calories</th>
     </thead>
-    <tr *ngFor="let currentMeal of childMealTable | calories:selectedCalories">
-      <td>{{ meal.name }}</td>
-      <td><button (click)="editButtonClicked(currentMeal)" class="btn">Edit</button></td>
-      <td>{{ meal.description }}</td>
-      <td>{{ meal.calories }}</td>
-    </tr>
+    <tbody>
+      <tr *ngFor="let currentMeal of childMealTable | calories:selectedCalories">
+        <table-row [meal]="currentMeal"></table-row>
+      </tr>
+    </tbody>
   </table>
+</div>
   `
 })
 
