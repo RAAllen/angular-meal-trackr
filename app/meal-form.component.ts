@@ -12,7 +12,7 @@ import { Meal } from './meal.model';
     </div>
     <div class="form-group">
       <label for="mealDescription">Add a description of the meal:</label>
-      <input #newDescription id="mealDescription" type="text" class="form-control" placeholder="7 Deep fried baby artichokes served with a side of parsley and lemon sauce and 3 lemon wedges.">
+      <input #newDescription id="mealDescription" type="text" class="form-control" placeholder="7 fried baby artichokes served with a side of parsley-lemon sauce.">
     </div>
     <div class="form-group">
       <label for="mealCalories">Add a calorie count to your meal:</label>

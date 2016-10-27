@@ -4,28 +4,27 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'meal-table',
   template: `
-  <table id="viewMeals" class="table-responsive table-bordered table-hover">
-  <select (change)="onChange($event.target.value)" class="filter">
-    <option value="all">Show All Meals</option>
-    <option value="lowCalorie">Show Low Calorie Meals</option>
-    <option value="highCalorie" selected="selected">Show High Calorie Meals</option>
-  </select>
+
+
+  <table id="viewMeals" class="table-bordered table-hover">
     <thead>
-      <th>Meal</th>
+      <th>Meal
+        <select (change)="onChange($event.target.value)" class="filter">
+          <option value="all" selected="selected">All Meals</option>
+          <option value="lowCalorie">Low Calorie Meals</option>
+          <option value="highCalorie"> High Calorie Meals</option>
+        </select>
+      </th>
       <th>Edit</th>
       <th>Description</th>
       <th>Calories</th>
     </thead>
-    <tbody>
-      <div *ngFor="let currentMeal of childMealTable | calories:selectedCalories">
-        <tr>
-          <td>{{ meal.name }}</td>
-          <td><button (click)="editButtonClicked(currentMeal)" class="btn">Edit</button></td>
-          <td>{{ meal.description }}</td>
-          <td>{{ meal.calories }}</td>
-        </tr>
-      </div>
-    </tbody>
+    <tr *ngFor="let currentMeal of childMealTable | calories:selectedCalories">
+      <td>{{ meal.name }}</td>
+      <td><button (click)="editButtonClicked(currentMeal)" class="btn">Edit</button></td>
+      <td>{{ meal.description }}</td>
+      <td>{{ meal.calories }}</td>
+    </tr>
   </table>
   `
 })

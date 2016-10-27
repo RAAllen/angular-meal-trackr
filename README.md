@@ -19,10 +19,12 @@
 
 ## Program Specifications
 
-* _The program will allow users to ._
-* Example Input: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-* Example Output: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
+* _The program will allow users to view a list of all meals._
+* _The program will allow users to view a list of only their high calorie meals._
+* _The program will allow users to view a list of only their low calorie meals._
+* _The program will allow users to add a new meal._
+* _The program will allow users to edit their meals._
+* _The program will allow users to delete meals._
 
 ## Support and Contact Details
 

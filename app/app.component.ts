@@ -5,10 +5,11 @@ import { Meal } from './meal.model';
   selector: 'meal-trackr',
   template: `
   <div class="container">
+    <h1>Meal Trackr</h1>
     <div class="row">
       <div id="mealForm" class="col-xs-6">
         <meal-form
-
+          (newMealSender)="addClicked($event)"
         ></meal-form>
       </div>
       <div id="mealTable" class="col-xs-6">
@@ -32,4 +33,7 @@ export class AppComponent {
     new Meal("Baked Potatoes", "Two baked potatoes served with cheddar cheese, broccoli, facon and sour cream.", 595),
     new Meal("Pasta with Tomato Sauce", "Rigatoni with homemade tomato sauce with kalamata olives, capers and Parmesan cheese.", 405)
   ];
+  addClicked(newMealFromChild: Meal) {
+    this.masterMealList.push(newMealFromChild);
+  }
 }
