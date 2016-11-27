@@ -39,7 +39,8 @@ export class MealTableComponent {
     this.selectedCalories = optionFromMenu;
     console.log(this.selectedCalories);
   }
-  editButtonClicked(mealToEdit: Meal) {
-    this.clickSender.emit(mealToEdit);
+  selectedMeal: Meal = null;
+  finishedEditing() {
+    this.selectedMeal = null;
   }
 }
