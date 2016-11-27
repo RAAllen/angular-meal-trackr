@@ -17,7 +17,6 @@ import { CaloriesPipe } from './calories.pipe';
     AppComponent,
     MealFormComponent,
     MealTableComponent,
-    TableRowComponent,
     EditMealComponent,
     CaloriesPipe
   ],

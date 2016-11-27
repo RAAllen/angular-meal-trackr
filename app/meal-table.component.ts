@@ -20,7 +20,10 @@ import { Meal } from './meal.model';
     </thead>
     <tbody>
       <tr *ngFor="let currentMeal of childMealTable | calories:selectedCalories">
-        <table-row [meal]="currentMeal"></table-row>
+        <td>{{ currentMeal.name }}</td>
+        <td><button (click)="editButtonClicked(currentMeal)" class="btn">Edit</button></td>
+        <td>{{ currentMeal.description }}</td>
+        <td>{{ currentMeal.calories }}</td>
       </tr>
     </tbody>
   </table>
