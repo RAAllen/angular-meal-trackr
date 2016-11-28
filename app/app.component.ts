@@ -12,6 +12,10 @@ import { Meal } from './meal.model';
         (clickSender)="editClicked($event)"
       ></meal-table>
     </div>
+    <edit-meal
+      [childSelectedMeal]="selectedMeal"
+      (updateClickedSender)="finishedEditing()"
+    ></edit-meal>
     <div id="mealForm">
       <meal-form
         (newMealSender)="addClicked($event)"
@@ -31,8 +35,12 @@ export class AppComponent {
     new Meal("Baked Potatoes", "Two baked potatoes served with cheddar cheese, broccoli, facon and sour cream.", 595),
     new Meal("Pasta with Tomato Sauce", "Rigatoni with homemade tomato sauce with kalamata olives, capers and Parmesan cheese.", 405)
   ];
-  editClicked() {
-
+  selectedMeal: Meal = null;
+  editClicked(clickedMeal: Meal) {
+    this.selectedMeal = clickedMeal;
+  }
+  finishedEditing() {
+    this.selectedMeal = null;
   }
   addClicked(newMealFromChild: Meal) {
     this.masterMealList.push(newMealFromChild);
