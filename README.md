@@ -1,11 +1,10 @@
-# _Angular Meal Trackr_
+# Angular Meal Trackr
 
-#### _This is an application that will allow a user to track their meals. It will use Angular 2, Typescript, Javascript, Node, Bower and Sass.  October 21, 2016_
+#### _This is an application that will allow a user to track their meals. It will use Angular 2, Typescript, Javascript, Node, Bower and Sass.  October 21, 2016._
 
 #### By _**Rebecca Allen**_
 
 ## Setup/Installation requirements
-
 
 * In order to utilize this project you will need a terminal application such as Terminal or Bash, a text editor application such as Atom, and a web browser such as Chrome or Firefox. You will also need to have Node.js(information available at https://nodejs.org/en/download/), Bower and Sass(information available at http://sass-lang.com/install) installed on your computer.
 * If you have Node.js installed you may need to globally install Gulp in order to build out and serve the application. This can be done by typing "npm install -g bower gulp" in the terminal.
@@ -29,14 +28,14 @@
 
 ## Support and Contact Details
 
-_Please contact RebeccaZarsky@gmail.com for technical questions or assistance running the program_
+_Please contact RebeccaZarsky@gmail.com for technical questions or assistance running the program._
 
 ## Technologies Used
 
-_This program utilizes HTML, CSS, Typescript, Angular 2, Javascript, Sass, Bower, Node and Bootstrap_
+_This program utilizes HTML, CSS, Typescript, Angular 2, Javascript, Sass, Bower, Node and Bootstrap._
 
 ## License
 
-*This program is licensed under the MIT license*
+*This program is licensed under the MIT license.*
 
 Copyright (c) 2016 **_Rebecca Allen_**
