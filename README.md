@@ -6,16 +6,17 @@
 
 ## Setup/Installation requirements
 
-* _In order to utilize this project you will need a terminal application such as Terminal or Bash, a text editor application such as Atom, and a web browser such as Chrome or Firefox. You will also need to have Node.js, Bower, Typescript and Sass installed on your computer._
-* _Start by opening the terminal application and typing the command "git clone https://github.com/RAAllen/angular-meal-trackr.git" after navigating with the "cd" command to the location you would like the project to be cloned into._
-* _Then use the terminal application to navigate to the project directory using the "cd" command._
-* _After navigating to in to the project directory type the following commands:_
-** _1. _"npm install"._
-** _2. _"bower install"._
-** _3. _"gulp build"._
-** _4. _"gulp serve"._
-* _This should install all dependencies required by the application, then start a web server and open it in your browser._
-* _Alternately you can view the project online at [RAAllen.github.io/angular-meal-trackr]._
+
+* In order to utilize this project you will need a terminal application such as Terminal or Bash, a text editor application such as Atom, and a web browser such as Chrome or Firefox. You will also need to have Node.js(information available at https://nodejs.org/en/download/), Bower and Sass(information available at http://sass-lang.com/install) installed on your computer.
+* If you have Node.js installed you may need to globally install Gulp in order to build out and serve the application. This can be done by typing "npm install -g bower gulp" in the terminal.
+* Start by opening the terminal application and typing the command "git clone https://github.com/RAAllen/angular-meal-trackr.git" after navigating with the "cd" command to the location you would like the project to be cloned into.
+* Then use the terminal application to navigate to the project directory using the "cd" command.
+* After navigating to in to the project directory type the following commands:
+    1. _"npm install"._
+    2. _"bower install"._
+    3. _"gulp build"._
+    4. _"gulp serve"._
+* This should install all dependencies required by the application, then start a web server and open it in your browser.
 
 ## Program Specifications
 
